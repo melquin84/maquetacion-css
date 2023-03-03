@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto+Slab:wght@400;700;900&family=Roboto:wght@400;700;900&display=swap');
 body {
+    font-family: 'Roboto Mono', monospace;
     margin: 0;
     padding: 0;
     position: fixed;
@@ -18,13 +20,13 @@ header {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
 }
-header .header-icons-container {
+.header-icons-container {
     width: 100%;
     height: 50px;
     display: grid;
     background-color: #47cfac;
 }
-header .header-icons-container .icons {
+.header-icons-container .icons {
     width: 300px;
     height: auto;
     display: flex;
@@ -34,7 +36,7 @@ header .header-icons-container .icons {
     justify-self: end;
     margin-right: 50px;
 }
-header .icons span {
+.icons span {
     color: white;
 }
 nav {
@@ -42,14 +44,14 @@ nav {
     grid-template-columns: repeat(2, 1fr);
     height: 90px;
 }
-nav .nav-logo-container {
+.nav-logo-container {
     margin-left: 50px;    
 }
-nav .nav-logo-container img {
+.nav-logo-container img {
     width: 220px;
     margin-top: 10px;
 }
-nav .profile-link {
+.profile-link {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -61,14 +63,16 @@ nav .profile-link a {
 }
 .hero-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/img/Cover.png");
-    height: 50vh;
+    height: calc(100vh - 140px);
+    min-width: 300px;
+    min-height: 500px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;  
 }
-.hero-image .hero-content {    
-    font-size: 1.4rem;
+.hero-content {    
+    font-size: 1.7rem;
     text-align: center;
     position: absolute;
     top: 50%;
@@ -76,11 +80,16 @@ nav .profile-link a {
     transform: translate(-50%, -50%);
     color: white;
   }
-  .hero-image .hero-content .hero-title {
-    max-width: 450px;
+.hero-title {
+    max-width: 800px;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
   }
-  .hero-image .hero-content .hero-button {
+.hero-button {
+    width: 150px;
+    height: 50px;
     margin-top: 50px;
+    font-size: 1rem;
     border: none;
     outline: 0;
     display: inline-block;
@@ -91,7 +100,7 @@ nav .profile-link a {
     font-weight: bolder;
     cursor: pointer;
   }
-  .hero-image .hero-content .hero-button:hover {
+.hero-button:hover {
     background-color: #555;
     color: white;
   }
